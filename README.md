@@ -46,12 +46,20 @@ Now, from your mac terminal, try to SSH in.
 ssh mohu@192.168.0.2
 ```
 
-### Install build tools, version control, screen and mysql
+### Install build tools, version control, screen, mysql and nginx
 
 ```bash
-sudo apt-get install linux-kernel-headers build-essential git-core mysql-server libmysqlclient15-dev libmysql++-dev wget curl libpcre3-dev libssl-dev lsof python-setuptools python-dev screen
+sudo apt-get install linux-kernel-headers build-essential git-core mysql-server libmysqlclient15-dev libmysql++-dev wget curl libpcre3-dev libssl-dev lsof python-setuptools python-dev screen nginx
 ```
 When prompted to create passwords for mysql just hit enter as it is a local machine.
+
+You'll need to give screen the correct permissions too.
+
+```bash
+sudo chmod a+rxw /dev/pts/0
+```
+
+
 
 
 
