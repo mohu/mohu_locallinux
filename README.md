@@ -3,7 +3,7 @@ mohu_locallinux
 
 The purpose of this repository is to collaborate on a readme which provides staff with instructions on how to set up their local boxes.
 
-Firstly, download [http://www.ubuntu.com/download/server](ubuntu server) and install it on VMWare (we are curently using version 4).
+Firstly, download [http://www.ubuntu.com/download/server](ubuntu server, 12.04 LTS) and install it on VMWare (we are curently using version 4).
 
 Once you have this you see that you have a command line inside a window. What you really want is to connect with SSH.
 
@@ -46,10 +46,10 @@ Now, from your mac terminal, try to SSH in.
 ssh mohu@192.168.0.2
 ```
 
-### Install build tools, version control, screen, mysql and nginx
+### Install build tools, version control, screen, vim, mysql and nginx
 
 ```bash
-sudo apt-get install linux-kernel-headers build-essential git-core mysql-server libmysqlclient15-dev libmysql++-dev wget curl libpcre3-dev libssl-dev lsof python-setuptools python-dev screen nginx
+sudo apt-get install linux-kernel-headers build-essential git-core mysql-server libmysqlclient15-dev libmysql++-dev wget curl libpcre3-dev libssl-dev lsof python-setuptools python-dev screen vim nginx
 ```
 When prompted to create passwords for mysql just hit enter as it is a local machine.
 
@@ -57,6 +57,32 @@ You'll need to give screen the correct permissions too.
 
 ```bash
 sudo chmod a+rxw /dev/pts/0
+```
+
+### Set defaults for mysql
+
+Stop the MySQL Server:
+
+```bash
+$ sudo service mysql stop
+```
+
+The edit it's configuration file:
+
+```bash
+$ sudo vim /etc/mysql/my.cnf
+```
+
+Ensure the following is in the configuration file:
+
+```
+character-set-server=utf8
+default-storage-engine=innodb
+```
+Start MySQL:
+
+```bash
+$ sudo service mysql start
 ```
 
 
