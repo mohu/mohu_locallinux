@@ -42,3 +42,16 @@ This should return two lines, the local 127.0.0.1 IP and the one you actually wa
 
 Now, from your mac terminal, try to SSH in.
 
+```bash
+ssh mohu@192.168.0.2
+```
+
+### Install build tools, version control, screen and mysql
+
+```bash
+sudo apt-get install linux-kernel-headers build-essential git-core mysql-server libmysqlclient15-dev libmysql++-dev wget curl libpcre3-dev libssl-dev lsof python-setuptools python-dev screen
+```
+When prompted to create passwords for mysql just hit enter as it is a local machine.
+
+
+
