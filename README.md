@@ -23,7 +23,7 @@ sudo apt-get install openssh-server
 
 ### Create the mohu user and grant sudo
 
-When prompted for a password use fj
+When prompted for a password use fj, for full name use Mohu. Ignore the rest.
 ```bash
 sudo adduser mohu
 sudo usermod -G sudo mohu
@@ -41,3 +41,4 @@ ifconfig | grep 'inet '
 This should return two lines, the local 127.0.0.1 IP and the one you actually want.
 
 Now, from your mac terminal, try to SSH in.
+
