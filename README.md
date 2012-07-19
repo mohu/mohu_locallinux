@@ -29,7 +29,6 @@ sudo adduser mohu
 sudo usermod -G sudo mohu
 ```
 
-
 ### Connect from your mac terminal
 
 In your ubuntu window find out your ip address
@@ -64,13 +63,13 @@ sudo chmod a+rxw /dev/pts/0
 Stop the MySQL Server:
 
 ```bash
-$ sudo service mysql stop
+sudo service mysql stop
 ```
 
 The edit it's configuration file:
 
 ```bash
-$ sudo vim /etc/mysql/my.cnf
+sudo vim /etc/mysql/my.cnf
 ```
 
 Ensure the following is in the configuration file:
@@ -82,9 +81,40 @@ default-storage-engine=innodb
 Start MySQL:
 
 ```bash
-$ sudo service mysql start
+sudo service mysql start
 ```
 
+### Install the Python Virtual Environment
+
+```bash
+sudo easy_install setuptools
+sudo apt-get install python-pip
+sudo pip install --upgrade pip
+sudo pip install --upgrade virtualenv
+sudo pip install --upgrade virtualenvwrapper
+```
+
+Make a folder for the virtual environments:
+
+```bash
+mkdir ~/.virtualenvs
+```
+
+The make sure the following is in your `~/.bashrc`:
+
+```bash
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+```
+
+When it is, reload your `~/.bashrc` file:
+
+```bash
+source ~/.bashrc
+```
 
 
 
