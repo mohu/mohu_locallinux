@@ -9,5 +9,35 @@ Once you have this you see that you have a command line inside a window. What yo
 
 For the sake of simplicity, everyone should have a user called mohu as their primary user.
 
-### Install SSH
+### Update apt-get package manager
 
+```bash
+sudo apt-get update
+```
+
+### Install SSH server
+
+```bash
+sudo apt-get install openssh-server
+```
+
+### Create the mohu user and grant sudo
+
+When prompted for a password use fj
+```bash
+sudo adduser mohu
+sudo usermod -G sudo mohu
+```
+
+
+### Connect from your mac terminal
+
+In your ubuntu window find out your ip address
+
+```bash
+ifconfig | grep 'inet '
+```
+
+This should return two lines, the local 127.0.0.1 IP and the one you actually want.
+
+Now, from your mac terminal, try to SSH in.
