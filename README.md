@@ -116,6 +116,10 @@ When it is, reload your `~/.bashrc` file:
 source ~/.bashrc
 ```
 
+### Install fabric
 
+```bash
+sudo apt-get install fabric
+```
 
 
