@@ -122,4 +122,18 @@ source ~/.bashrc
 sudo apt-get install fabric
 ```
 
+### Install node, npm, stylus and coffeescript
+
+```bash
+cd ~
+mkdir src
+cd src
+git clone git://github.com/ry/node.git
+cd node
+./configure
+make
+sudo make install
+curl http://npmjs.org/install.sh | sudo sh
+
+```
 
