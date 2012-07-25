@@ -134,6 +134,12 @@ cd node
 make
 sudo make install
 curl http://npmjs.org/install.sh | sudo sh
-
+sudo npm install coffee-script -g
+sudo npm install stylus -g
 ```
+
+note from kien : You, can install node / npm in another directory, where sudo privileges are not needed, make sure the directories where npm and node are in your $PATH variables and you don't need to sudo npm
+
+
+
 
