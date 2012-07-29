@@ -131,7 +131,7 @@ We will use the most recent stable version, so please update as needed.
 cd ~
 mkdir src
 cd src
-export NODE_VERSION='0.6.18'
+export NODE_VERSION='0.6.19'
 wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
 tar xvfz node-v$NODE_VERSION.tar.gz
 cd node-v$NODE_VERSION
