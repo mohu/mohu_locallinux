@@ -124,22 +124,35 @@ sudo apt-get install fabric
 
 ### Install node, npm, stylus and coffeescript
 
+For development it is most convenient to install to the user's home folder to avoid having to sudo.
+We will use the most recent stable version, so please update as needed.
+
 ```bash
 cd ~
 mkdir src
 cd src
-git clone git://github.com/ry/node.git
-cd node
-./configure
-make
-sudo make install
-curl http://npmjs.org/install.sh | sudo sh
-sudo npm install coffee-script -g
-sudo npm install stylus -g
+export NODE_VERSION='0.6.18'
+wget http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
+tar xvfz node-v$NODE_VERSION.tar.gz
+cd node-v$NODE_VERSION
+./configure --prefix=~/local
+make install
+cd ~/src
 ```
 
-note from kien : You, can install node / npm in another directory, where sudo privileges are not needed, make sure the directories where npm and node are in your $PATH variables and you don't need to sudo npm
+Now for npm, coffeescript and stylus, if you need them
 
+```bash
+curl http://npmjs.org/install.sh | sudo sh
+sudo npm install -g coffee-script
+sudo npm install -g stylus
+```
 
+Now for express and socket.io, if you need them
+
+```bash
+sudo npm install -g express
+sudo npm install -g socket.io
+```
 
 
